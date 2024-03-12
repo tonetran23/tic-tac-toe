@@ -105,7 +105,7 @@ int main()
                     if(isTie)
                         cout << "Tied game" << endl;
                     if(!isWon)
-                        cout << "Congratulations " << opponent << endl;
+                        cout << "Congratulations, " << opponent << " wins"<< endl;
                     break;
                 }
             }
@@ -122,16 +122,16 @@ int main()
 				cout << key << endl << flush;
 				
 				//checks for invaild key press
-				if(key == "*" || key == "0" || key == "#"){ // invaild keys
-					cout << "Invalid key pressed \'" << key << "\'" << endl; // indicateds invaild key press
+				if(key == "*" || key == "0" || key == "#"){
+					cout << "Invalid key pressed \'" << key << "\'" << endl;
 					continue;
 				}
 			//checks for duplicated key press
-				int dup_key = stoi(key); 
+				int dup_key = stoi(key);
 				is_valid = true;
 				for (int i=0; i< move_idx; i++){
-					if(moves[i] == dup_key){ // checks board for taken spots
-						is_valid = false; // is_valid is false if spot is taken
+					if(moves[i] == dup_key){
+						is_valid = false;
 						cout<< "duplicated key \'" << key << "\'" <<endl;
 						break;
 					}
@@ -237,6 +237,9 @@ bool check_grid(string order, bool &isTie, bool &isWon) {
 	if (winner != '\0'){
 		isWon = true;
 		game_over = true;
+		if (winner == 'X') {
+			isWon = false;
+		}
 	}
     return game_over; // Returns true if game is over, false otherwise
 }
