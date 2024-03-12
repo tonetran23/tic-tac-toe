@@ -122,16 +122,16 @@ int main()
 				cout << key << endl << flush;
 				
 				//checks for invaild key press
-				if(key == "*" || key == "0" || key == "#"){
-					cout << "Invalid key pressed \'" << key << "\'" << endl;
+				if(key == "*" || key == "0" || key == "#"){ // invaild keys
+					cout << "Invalid key pressed \'" << key << "\'" << endl; // indicateds invaild key press
 					continue;
 				}
 			//checks for duplicated key press
-				int dup_key = stoi(key);
+				int dup_key = stoi(key); 
 				is_valid = true;
 				for (int i=0; i< move_idx; i++){
-					if(moves[i] == dup_key){
-						is_valid = false;
+					if(moves[i] == dup_key){ // checks board for taken spots
+						is_valid = false; // is_valid is false if spot is taken
 						cout<< "duplicated key \'" << key << "\'" <<endl;
 						break;
 					}
