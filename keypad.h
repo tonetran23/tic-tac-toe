@@ -1,7 +1,7 @@
 /*
     ECEGRE-2020 - Seattle University
 
-    Description: Homework#4 C++ header file to support 4x3 Keypad assignment
+    Description:C++ header file to support 4x3 Keypad
 
     Author: Tony Tran and John Suizu
 */
