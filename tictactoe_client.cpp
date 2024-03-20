@@ -3,7 +3,7 @@
     Description: Tic-tac-toe Client
     
     Author: Eddy Ferre - ferree@seattleu.edu
-    Modified by: Brandon Vu
+    Modified by: Tony Tran
 
 */
 
